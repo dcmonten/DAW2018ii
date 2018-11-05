@@ -17,8 +17,13 @@
 	border-color: #606060;
 	border-style: solid;
 	text-align: left;
+
 	min-width: 120px;
 	min-height: 144px;
+
+	max-width: 120px;
+	max-height: 144px;
+
 	padding: 17px;
 	display: inline-block;
 	border-radius: 10px;
