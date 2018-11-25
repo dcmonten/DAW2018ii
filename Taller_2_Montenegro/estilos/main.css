@@ -43,6 +43,7 @@
 .tweet{
   font-style: italic;
   font-size: 12px;
+  text-align: justify;
 }
 
 .imagen-tweet{
@@ -50,6 +51,14 @@
 }
 
 .link-tweet{
+  text-decoration: underline;
+  color: cornflowerblue;
+  font-size: 12px;
 
+}
 
+.time-tweet{
+  text-align: right;
+  font-style: italic;
+  font-size: 12px;
 }
