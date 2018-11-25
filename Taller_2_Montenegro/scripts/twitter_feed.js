@@ -2,13 +2,22 @@ function addNewTweet(autor, tweet, imagen="", link, fecha){
 
 
   var aut= $("<h5/>", {
-    "class": "autor-tweet",
+    "class": "autor-tweet col-12",
     html: "@"+autor+", dijo:"
   });
 
   var tuit=$("<p/>",{
-    "class": "tweet",
+    "class": "tweet col-8",
     html: "\""+tweet+"\""
+  });
+
+  var twm=$("<img/>",{
+    "class": "tw-image col-4 col-md-4 col-lg-4 col-sm-4",
+    "src": "imagenes/tw.png"
+  })
+
+  var tw=$("<div/>",{
+    "class": "tw-div col-12"
   });
 
   var img=$("<p/>",{
@@ -16,27 +25,33 @@ function addNewTweet(autor, tweet, imagen="", link, fecha){
     html: imagen
   });
 
-  var lnk= $("<p/>",{
-    "class": "link-tweet",
+  var lnk= $("<a/>",{
+    "class": "link-tweet col-12",
+    "href": link,
     html: link
   });
 
-  var date=$("<p/>",{
-    "class": "time-tweet",
+  var date=$("<time/>",{
+    "class": "time-tweet col-12 d-flex justify-content-end",
+    "datetime": fecha,
     html: fecha
   });
 
   var div=$("<div/>",{
-    "class": "tweet-container"
+    "class": "tweet-container row"
   });
 
   aut.appendTo(div);
-  tuit.appendTo(div);
+  twm.appendTo(tw);
+  tuit.appendTo(tw);
+  tw.appendTo(div);
   if (imagen!="") img.appendTo(div);
   lnk.appendTo(div);
   date.appendTo(div);
 
   div.appendTo("#tweets");
+
+
 }
 
 
@@ -61,7 +76,9 @@ function loadTweets(kw){
 
         addNewTweet(aut,des,im,lnk,dt);
 
+
       });
+
     },
     error: function () {
       console.log("No se puede leer");
@@ -76,9 +93,7 @@ function loadTweets(kw){
 
 $(document).ready(function(){
 
-
-
-  console.log("entra a la funcion");
+$(".tweets-container").hide();
 
   $(".btn").click(function(e){
 
@@ -88,6 +103,7 @@ $(document).ready(function(){
 
       var tweets = $('#tweets .tweets-container');
       $(".tweets-container").empty();
+      $(".tweets-container").show();
       var bsq=$("<p/>",{
         "class": "tbsq",
         html: texto
