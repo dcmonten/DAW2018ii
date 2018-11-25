@@ -1,0 +1,55 @@
+*{
+  font-family: "Helvetica", sans-serif;
+
+}
+
+#clave{
+
+  box-shadow: 3px 6px darkgray;
+
+}
+
+.tbsq{
+  font-size: 16px;
+  background-color: dodgerblue;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+
+.btn{
+
+  border-radius: 5px;
+  border-color: cornflowerblue;
+  background-color: deepskyblue;
+  font-weight: bold;
+  padding: 5px;
+  color: black;
+
+}
+.tweet-container{
+  border-bottom: 2px solid darkgray;
+
+
+}
+.autor-tweet{
+  font-weight: bold;
+  font-size: 14px;
+  color:black;
+
+}
+
+.tweet{
+  font-style: italic;
+  font-size: 12px;
+}
+
+.imagen-tweet{
+
+}
+
+.link-tweet{
+
+
+}
